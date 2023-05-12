@@ -1,22 +1,10 @@
-import axios from 'axios';
-import { useEffect, useState } from 'react';
+import { useJoke } from './useJoke';
 
 export const Joke = () => {
-  const [joke, setJoke] = useState();
-
-  useEffect(() => {
-    reloadJoke();
-  }, []);
-
-  function reloadJoke() {
-    axios.get('https://api.chucknorris.io/jokes/random')
-      .then(response => {
-        setJoke(response.data.value);
-      });
-  }
+  const {joke, loadNext} = useJoke();
 
   return <div>
     <p>{joke}</p>
-    <button onClick={reloadJoke}>Load next</button>
+    <button onClick={loadNext}>Load next</button>
     </div>
 }
