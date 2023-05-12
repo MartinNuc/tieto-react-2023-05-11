@@ -7,7 +7,6 @@ export const MousePosition = () => {
   
   useEffect(() => {
     const onMouseMove = (event: MouseEvent) => {
-      console.log(mousePosition);
       setMousePosition((value) => ({
         x: event.clientX,
         y: event.clientY
