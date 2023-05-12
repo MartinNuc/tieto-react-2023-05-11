@@ -7,9 +7,11 @@ import { NumberGenerator } from './NumberGenerator';
 import { MousePosition } from './MousePosition';
 import { AutomaticCounter } from './AutomaticCounter';
 import { Dropdown } from './dropdown/dropdown';
+import { Joke } from './Joke';
 
 function App() {
   return (<>
+    <Joke />
     <AutomaticCounter />
     <MousePosition />
     <Dropdown buttonTitle='Toggle menu'>
